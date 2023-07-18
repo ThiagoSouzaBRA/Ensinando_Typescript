@@ -30,3 +30,43 @@ for(let i = 0; i < 100; i++){
     notaAluno[i] = (Math.floor(Math.random() * 100) + 50);
 }
 console.log(notaAluno[notaAluno.indexOf(70)])
+
+function somarNumeros(a:number, b:number) : number {
+    return a+b;
+}
+
+console.log(somarNumeros(1,2))
+
+class Cachorro{
+    private nome: string;
+
+    constructor(nome:string){
+        this.nome = nome;
+    }
+
+    latir() : void {
+        console.log(`[${this.nome}] Au Au!`)
+    }
+
+    andar() : void {
+        console.log(`[${this.nome}] Andando...`)
+    }
+
+    parar() : void {
+        console.log(`[${this.nome}] Descansando!`)
+    }
+
+    getNome(): string {
+        return this.nome;
+    }
+
+}
+
+var listaCachorro = []
+listaCachorro.push(new Cachorro("A"));
+listaCachorro.push(new Cachorro("B"));
+listaCachorro.push(new Cachorro("C"));
+
+listaCachorro.map(n => n.latir())
+listaCachorro.map(n => n.andar())
+listaCachorro.map(n => n.parar())

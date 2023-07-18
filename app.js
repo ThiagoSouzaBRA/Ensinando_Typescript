@@ -23,6 +23,33 @@ var notaAluno = [];
 for (var i = 0; i < 100; i++) {
     notaAluno[i] = (Math.floor(Math.random() * 100) + 50);
 }
-// console.log(notaAluno.filter( n => n > 60));
-console.log(notaAluno.indexOf(70));
 console.log(notaAluno[notaAluno.indexOf(70)]);
+function somarNumeros(a, b) {
+    return a + b;
+}
+console.log(somarNumeros(1, 2));
+var Cachorro = /** @class */ (function () {
+    function Cachorro(nome) {
+        this.nome = nome;
+    }
+    Cachorro.prototype.latir = function () {
+        console.log("[".concat(this.nome, "] Au Au!"));
+    };
+    Cachorro.prototype.andar = function () {
+        console.log("[".concat(this.nome, "] Andando..."));
+    };
+    Cachorro.prototype.parar = function () {
+        console.log("[".concat(this.nome, "] Descansando!"));
+    };
+    Cachorro.prototype.getNome = function () {
+        return this.nome;
+    };
+    return Cachorro;
+}());
+var listaCachorro = [];
+listaCachorro.push(new Cachorro("A"));
+listaCachorro.push(new Cachorro("B"));
+listaCachorro.push(new Cachorro("C"));
+listaCachorro.map(function (n) { return n.latir(); });
+listaCachorro.map(function (n) { return n.andar(); });
+listaCachorro.map(function (n) { return n.parar(); });
