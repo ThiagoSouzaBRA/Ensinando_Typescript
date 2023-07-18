@@ -1,3 +1,5 @@
+import { Cachorro } from "./cachorro";
+
 // var isBoolean: boolean = false;
 // isBoolean = true;
 // // isBoolean = "Oi" //Erro
@@ -36,31 +38,6 @@ function somarNumeros(a:number, b:number) : number {
 }
 
 console.log(somarNumeros(1,2))
-
-class Cachorro{
-    private nome: string;
-
-    constructor(nome:string){
-        this.nome = nome;
-    }
-
-    latir() : void {
-        console.log(`[${this.nome}] Au Au!`)
-    }
-
-    andar() : void {
-        console.log(`[${this.nome}] Andando...`)
-    }
-
-    parar() : void {
-        console.log(`[${this.nome}] Descansando!`)
-    }
-
-    getNome(): string {
-        return this.nome;
-    }
-
-}
 
 var listaCachorro = []
 listaCachorro.push(new Cachorro("A"));

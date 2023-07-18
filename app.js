@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var cachorro_1 = require("./cachorro");
 // var isBoolean: boolean = false;
 // isBoolean = true;
 // // isBoolean = "Oi" //Erro
@@ -28,28 +31,10 @@ function somarNumeros(a, b) {
     return a + b;
 }
 console.log(somarNumeros(1, 2));
-var Cachorro = /** @class */ (function () {
-    function Cachorro(nome) {
-        this.nome = nome;
-    }
-    Cachorro.prototype.latir = function () {
-        console.log("[".concat(this.nome, "] Au Au!"));
-    };
-    Cachorro.prototype.andar = function () {
-        console.log("[".concat(this.nome, "] Andando..."));
-    };
-    Cachorro.prototype.parar = function () {
-        console.log("[".concat(this.nome, "] Descansando!"));
-    };
-    Cachorro.prototype.getNome = function () {
-        return this.nome;
-    };
-    return Cachorro;
-}());
 var listaCachorro = [];
-listaCachorro.push(new Cachorro("A"));
-listaCachorro.push(new Cachorro("B"));
-listaCachorro.push(new Cachorro("C"));
+listaCachorro.push(new cachorro_1.Cachorro("A"));
+listaCachorro.push(new cachorro_1.Cachorro("B"));
+listaCachorro.push(new cachorro_1.Cachorro("C"));
 listaCachorro.map(function (n) { return n.latir(); });
 listaCachorro.map(function (n) { return n.andar(); });
 listaCachorro.map(function (n) { return n.parar(); });
